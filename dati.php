@@ -1,7 +1,7 @@
 <?php
 
-$nome = $_GET["nomeUtente"];
-$messaggio = $_GET["messaggio"];
+$nome = $_POST["nomeUtente"];
+$messaggio = $_POST["messaggio"];
 
 
 var_dump($nome);
