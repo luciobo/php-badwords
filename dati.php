@@ -10,7 +10,7 @@ var_dump($messaggio);
 echo "Parola da censurare:" . $parolaDaCensurare . "<br>";
 echo "Messaggio ricevuto:" . $messaggio . "<br>";
 
-echo str_replace($parolaDaCensurare, "  --hai scritto una parolaccia--", "$messaggio");
+echo str_replace($parolaDaCensurare, "***", "$messaggio");
 
 
 ?>
@@ -37,8 +37,10 @@ echo str_replace($parolaDaCensurare, "  --hai scritto una parolaccia--", "$messa
 <div class="text-center">
     <h2 class="text-success">Nome Utente</h2>
     <h4 class="text-danger"><?php echo $parolaDaCensurare?></h4>
+    <span>dettagli tecnici: <span><?php var_dump($parolaDaCensurare) ?></span></span>
     <h2 class="text-success">Messaggio Scritto</h2>
     <h4 class="text-danger"><?php echo str_replace($parolaDaCensurare, "****", "$messaggio") ?></h4>
+    <span>dettagli tecnici: <span><?php var_dump($messaggio) ?></span></span>
 </div>
 
 </body>
