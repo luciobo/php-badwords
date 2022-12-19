@@ -4,13 +4,13 @@ $parolaDaCensurare = $_POST["parolaDaCensurare"];
 $messaggio = $_POST["messaggio"];
 
 
-var_dump($parolaDaCensurare);
-var_dump($messaggio);
+// var_dump($parolaDaCensurare);
+// var_dump($messaggio);
 
-echo "Parola da censurare:" . $parolaDaCensurare . "<br>";
-echo "Messaggio ricevuto:" . $messaggio . "<br>";
+// echo "Parola da censurare:" . $parolaDaCensurare . "<br>";
+// echo "Messaggio ricevuto:" . $messaggio . "<br>";
 
-echo str_replace($parolaDaCensurare, "***", "$messaggio");
+// echo str_replace($parolaDaCensurare, "***", "$messaggio");
 
 
 ?>
@@ -34,14 +34,18 @@ echo str_replace($parolaDaCensurare, "***", "$messaggio");
 
 <body>
 
-<div class="text-center">
-    <h2 class="text-success">Nome Utente</h2>
-    <h4 class="text-danger"><?php echo $parolaDaCensurare?></h4>
-    <span>dettagli tecnici: <span><?php var_dump($parolaDaCensurare) ?></span></span>
-    <h2 class="text-success">Messaggio Scritto</h2>
-    <h4 class="text-danger"><?php echo str_replace($parolaDaCensurare, "****", "$messaggio") ?></h4>
-    <span>dettagli tecnici: <span><?php var_dump($messaggio) ?></span></span>
-</div>
+    <div class="text-center pt-5">
+        <div>
+            <h2 class="text-success">Parola Da Censurare</h2>
+            <h4 class="text-danger"><?php echo $parolaDaCensurare ?></h4>
+            <span>dettagli tecnici: <span><?php var_dump($parolaDaCensurare) ?></span></span>
+        </div>
+        <div class="pt-5">
+            <h2 class="text-success">Messaggio Scritto</h2>
+            <h4 class="text-danger"><?php echo str_replace($parolaDaCensurare, "****", "$messaggio") ?></h4>
+            <span>dettagli tecnici: <span><?php var_dump($messaggio) ?></span></span>
+        </div>
+    </div>
 
 </body>
 
