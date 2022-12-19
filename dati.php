@@ -1,16 +1,16 @@
 <?php
 
-$nome = $_POST["nomeUtente"];
+$parolaDaCensurare = $_POST["parolaDaCensurare"];
 $messaggio = $_POST["messaggio"];
 
 
-var_dump($nome);
+var_dump($parolaDaCensurare);
 var_dump($messaggio);
 
-echo "Nome ricevuto:" . $nome . "<br>";
+echo "Parola da censurare:" . $parolaDaCensurare . "<br>";
 echo "Messaggio ricevuto:" . $messaggio . "<br>";
 
-echo str_replace("scoppiare", "  --hai scritto una parolaccia--", "$messaggio");
+echo str_replace($parolaDaCensurare, "  --hai scritto una parolaccia--", "$messaggio");
 
 
 ?>
@@ -30,20 +30,17 @@ echo str_replace("scoppiare", "  --hai scritto una parolaccia--", "$messaggio");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
 
 <div class="text-center">
     <h2 class="text-success">Nome Utente</h2>
-    <h4 class="text-danger"><?php echo $nome?></h4>
+    <h4 class="text-danger"><?php echo $parolaDaCensurare?></h4>
     <h2 class="text-success">Messaggio Scritto</h2>
-    <h4 class="text-danger"><?php echo str_replace("scoppiare", "  --hai scritto una parolaccia--", "$messaggio") ?></h4>
+    <h4 class="text-danger"><?php echo str_replace($parolaDaCensurare, "****", "$messaggio") ?></h4>
 </div>
 
-    <!-- javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>
