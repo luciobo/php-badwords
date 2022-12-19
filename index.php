@@ -28,7 +28,6 @@
     <div class="row justify-content-center py-3">
         <div class="col-6">
             <form action="dati.php" method="GET">
-                <legend>Contatti [GET]</legend>
                 <div class="mb-3">
                     <label for="" class="form-label">Nome</label>
                     <input type="text" class="form-control" name="nomeUtente">
