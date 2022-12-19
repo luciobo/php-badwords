@@ -20,28 +20,27 @@
 
 <body>
 
-
-    <div class="text-center py-3">
-        <h1>Il mio primo form in php</h1>
-    </div>
-    <div class="row justify-content-center py-3">
-        <div class="col-6">
-            <form action="dati.php" method="POST">
-                <div class="mb-3">
-                    <label for="" class="form-label">Parola Da censurare</label>
-                    <input type="text" class="form-control" name="parolaDaCensurare">
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Messaggio</label>
-                    <textarea class="form-control" name="messaggio"></textarea>
-                </div>
-                <button class="btn btn-primary">Invia</button>
-            </form>
+    <div class="container bg-success text-light vh-100">
+        <div class="text-center py-3">
+            <h1>Il mio primo form in php</h1>
+        </div>
+        <div class="row justify-content-center py-3">
+            <div class="col-4">
+                <form action="dati.php" method="POST">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Parola Da censurare</label>
+                        <input type="text" class="form-control" name="parolaDaCensurare">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Messaggio</label>
+                        <textarea class="form-control" name="messaggio"></textarea>
+                    </div>
+                    <button class="btn btn-primary">Invia</button>
+                </form>
+            </div>
         </div>
     </div>
 
-    <!-- javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>
